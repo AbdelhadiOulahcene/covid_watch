@@ -1,3 +1,4 @@
+import 'package:covidwatch/layout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -120,50 +121,54 @@ class Login extends StatelessWidget {
             right:w/14,
             child:Stack(
               children: <Widget>[
+                InkWell(
+                  child: Container(
+                      width: w/1.18,
+                      height: h/14.125,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(6.0),
+                        color: const Color(0xff3B5998),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20.0, 5, 20, 5),
+                        child:Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
 
-                  Container(
-                    width: w/1.18,
-                    height: h/14.125,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.0),
-                      color: const Color(0xff3B5998),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20.0, 5, 20, 5),
-                      child:Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-
-                        Text(
-                          'Sign in with Facebook',
-                          style: TextStyle(
-                            fontFamily:'Hind-Bold',
-                            fontSize: 18,
-                            color: const Color(0xffffffff),
-                            letterSpacing: 0.36,
-                            height: 2,
+                          Text(
+                            'Sign in with Facebook',
+                            style: TextStyle(
+                              fontFamily:'Hind-Bold',
+                              fontSize: 18,
+                              color: const Color(0xffffffff),
+                              letterSpacing: 0.36,
+                              height: 2,
+                            ),
+                            textAlign: TextAlign.left,
                           ),
-                          textAlign: TextAlign.left,
-                        ),
-                        Spacer(),
-                        Stack(
-                          children: <Widget>[
-                            Container(
-                              width: 24.0,
-                              height: 24.0,
-                              color: const Color(0x00ffffff),
-                            ),
-                            SvgPicture.string(
-                              _svg_1zwmre,
-                              allowDrawingOutsideViewBox: true,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ) ,
-                    ),
+                          Spacer(),
+                          Stack(
+                            children: <Widget>[
+                              Container(
+                                width: 24.0,
+                                height: 24.0,
+                                color: const Color(0x00ffffff),
+                              ),
+                              SvgPicture.string(
+                                _svg_1zwmre,
+                                allowDrawingOutsideViewBox: true,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ) ,
+                      ),
 
-                  ),
+                    ),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SidebarLayout()));
+                  },
+                ),
 
               ],
             ),

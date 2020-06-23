@@ -8,11 +8,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Color(0xFFECF0F1),
-      statusBarIconBrightness: Brightness.dark,
-    ));
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Covid Watch',
       home: Splashscreen(),
 

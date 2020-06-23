@@ -1,10 +1,24 @@
+import 'package:covidwatch/Login.dart';
 import 'package:flutter/material.dart';
 //import './Login.dart';
 
-class Splashscreen extends StatelessWidget {
+class Splashscreen extends StatefulWidget {
   Splashscreen({
-    Key key,
-  }) : super(key: key);
+    Key key,}) : super(key: key);
+
+  @override
+  _SplashscreenState createState() => _SplashscreenState();
+}
+
+class _SplashscreenState extends State<Splashscreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      Duration(seconds: 4),(){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+      });
+  }
   @override
   Widget build(BuildContext context) {
     Size media = MediaQuery.of(context).size;
