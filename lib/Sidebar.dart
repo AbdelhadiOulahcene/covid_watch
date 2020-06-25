@@ -48,7 +48,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
           top: 0,
           bottom: 0,
           left: isSidebarOpenedAsync.data? 0 : -screenWidth,
-          right: isSidebarOpenedAsync.data? 0 : screenWidth-40,
+          right: isSidebarOpenedAsync.data? 0 : screenWidth-30,
           child: Row(
             children: <Widget>[
               Expanded(
@@ -137,7 +137,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                 ),
               ),
               Align(
-                alignment: Alignment(0,-0.9),
+                alignment: Alignment(0,-1),
                 child: GestureDetector(
                   onTap: (){
                     onIconPressed();
@@ -145,7 +145,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                   child: ClipPath(
                     clipper: CustomMenuClipper(),
                     child: Container(
-                      width: 35,
+                      width: 30,
                       height: 120,
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
