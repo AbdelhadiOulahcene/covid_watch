@@ -11,6 +11,7 @@ import 'bloc/bloc_navigation/navigation_bloc.dart';
 class SideBar extends StatefulWidget {
   @override
   _SideBarState createState() => _SideBarState();
+
 }
 
 class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<SideBar> {

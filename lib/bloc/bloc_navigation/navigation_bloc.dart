@@ -28,6 +28,7 @@ class NavigationBloc extends Bloc<NavigationEvents,NavigationStates>{
       case NavigationEvents.StatsPageClicked:yield Stats();
       break;
       case NavigationEvents.NewsPageClicked:yield News();
+      break;
     }
   }
 }
