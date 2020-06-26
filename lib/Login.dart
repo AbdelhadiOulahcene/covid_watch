@@ -18,163 +18,161 @@ class Login extends StatelessWidget {
     print(h);print(w);
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
-      body:SafeArea(
-        child:Stack(
-        children: <Widget>[
-          Container(
+      body:Stack(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: const AssetImage('assets/images/background.png'),
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+        Positioned(
+          top:h-h/1.14,
+          left:w/6,
+          right: w/6,
+          child: Container(
+            width: w/1.5,
+            height: h/3.83,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/background.png'),
+                image: const AssetImage('assets/images/watch.png'),
                 fit: BoxFit.fill,
               ),
             ),
           ),
-          Positioned(
-            top:h-h/1.14,
-            left:w/6,
-            right: w/6,
-            child: Container(
-              width: w/1.5,
-              height: h/3.83,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/images/watch.png'),
-                  fit: BoxFit.fill,
-                ),
+        ),
+        Positioned(
+          top:h-h/1.61,
+          left:1,
+          right:1,
+          child:SizedBox(
+            child: Text(
+              'Covid-19 virus spread tracking',
+              style: TextStyle(
+                fontFamily: 'Roboto-Regular',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+                letterSpacing: 0.39599999999999996,
+                height: 1.3333333333333333,
               ),
+              textAlign: TextAlign.center,
             ),
-          ),
-          Positioned(
-            top:h-h/1.61,
-            left:1,
-            right:1,
-            child:SizedBox(
-              child: Text(
-                'Covid-19 virus spread tracking',
-                style: TextStyle(
-                  fontFamily: 'Roboto-Regular',
-                  fontSize: 18,
-                  color: const Color(0xffffffff),
-                  letterSpacing: 0.39599999999999996,
-                  height: 1.3333333333333333,
+          ) ,
+        ),
+        Positioned(
+          top:h/1.93,
+          left:1 ,
+          right:1,
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                child: Text(
+                  'Track people\n you meet\n',
+                  style: TextStyle(
+                    fontFamily: 'Roboto-Bold',
+                    fontSize: 36,
+                    color: const Color(0xffffffff),
+                    fontWeight: FontWeight.w700,
+                    height: 1.1111111111111112,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
-            ) ,
-          ),
-          Positioned(
-            top:h/1.93,
-            left:1 ,
-            right:1,
-            child: Column(
-              children: <Widget>[
-                SizedBox(
+              SizedBox(
                   child: Text(
-                    'Track people\n you meet\n',
+                    'An app to track and report on \nthe corona cases in Algeria.',
                     style: TextStyle(
-                      fontFamily: 'Roboto-Bold',
-                      fontSize: 36,
+                      fontFamily: 'Roboto-Regular',
+                      fontSize: 18,
                       color: const Color(0xffffffff),
-                      fontWeight: FontWeight.w700,
-                      height: 1.1111111111111112,
+                      letterSpacing: 0.39599999999999996,
+                      height: 1.3333333333333333,
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(
-                    child: Text(
-                      'An app to track and report on \nthe corona cases in Algeria.',
-                      style: TextStyle(
-                        fontFamily: 'Roboto-Regular',
-                        fontSize: 18,
-                        color: const Color(0xffffffff),
-                        letterSpacing: 0.39599999999999996,
-                        height: 1.3333333333333333,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-              ],
-            ),
+            ],
           ),
-          Positioned(
-            top: h-h/4.7,
-            left:1,
-            right:1,
-            child:SizedBox(
-              child: Text(
-                'Use Facebook to find your friends',
-                style: TextStyle(
-                  fontFamily: 'Roboto-Regular',
-                  fontSize: 14,
-                  color: const Color(0xff918e8e),
-                  letterSpacing: 0.42,
-                  height: 1.2857142857142858,
-                ),
-                textAlign: TextAlign.center,
+        ),
+        Positioned(
+          top: h-h/4.7,
+          left:1,
+          right:1,
+          child:SizedBox(
+            child: Text(
+              'Use Facebook to find your friends',
+              style: TextStyle(
+                fontFamily: 'Roboto-Regular',
+                fontSize: 14,
+                color: const Color(0xff918e8e),
+                letterSpacing: 0.42,
+                height: 1.2857142857142858,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
-          Positioned(
-            top: h-h/5.8,
-            left:w/14,
-            right:w/14,
-            child:Stack(
-              children: <Widget>[
-                InkWell(
-                  child: Container(
-                      width: w/1.18,
-                      height: h/14.125,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        color: const Color(0xff3B5998),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.0, 5, 20, 5),
-                        child:Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-
-                          Text(
-                            'Sign in with Facebook',
-                            style: TextStyle(
-                              fontFamily:'Hind-Bold',
-                              fontSize: 18,
-                              color: const Color(0xffffffff),
-                              letterSpacing: 0.36,
-                              height: 2,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                          Spacer(),
-                          Stack(
-                            children: <Widget>[
-                              Container(
-                                width: 24.0,
-                                height: 24.0,
-                                color: const Color(0x00ffffff),
-                              ),
-                              SvgPicture.string(
-                                _svg_1zwmre,
-                                allowDrawingOutsideViewBox: true,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ) ,
-                      ),
-
+        ),
+        Positioned(
+          top: h-h/5.8,
+          left:w/14,
+          right:w/14,
+          child:Stack(
+            children: <Widget>[
+              InkWell(
+                child: Container(
+                    width: w/1.18,
+                    height: h/14.125,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6.0),
+                      color: const Color(0xff3B5998),
                     ),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SidebarLayout()));
-                  },
-                ),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20.0, 5, 20, 5),
+                      child:Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
 
-              ],
-            ),
+                        Text(
+                          'Sign in with Facebook',
+                          style: TextStyle(
+                            fontFamily:'Hind-Bold',
+                            fontSize: 18,
+                            color: const Color(0xffffffff),
+                            letterSpacing: 0.36,
+                            height: 2,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                        Spacer(),
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              width: 24.0,
+                              height: 24.0,
+                              color: const Color(0x00ffffff),
+                            ),
+                            SvgPicture.string(
+                              _svg_1zwmre,
+                              allowDrawingOutsideViewBox: true,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ) ,
+                    ),
+
+                  ),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SidebarLayout()));
+                },
+              ),
+
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
       )
     );
   }

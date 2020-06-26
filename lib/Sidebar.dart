@@ -76,7 +76,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                               backgroundColor: Colors.grey,
                             ),
                             SizedBox(height: 20,),
-                            Text("Abdenour",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
+                            Text("Abdenour Benantar",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
                             SizedBox(height: 30,),
                           ],
                         ),

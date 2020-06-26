@@ -1,3 +1,4 @@
+import 'package:covidwatch/SafeZonesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:covidwatch/Splashscreen.dart';
 import 'package:flutter/services.dart';

@@ -20,7 +20,7 @@ class _MyStatusState extends State<MyStatus> {
           padding: const EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 15,),
+              SizedBox(height: 12,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
