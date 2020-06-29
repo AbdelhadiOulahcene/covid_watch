@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1001228092283",
+    "firebase_url": "https://covidwatch-146ba.firebaseio.com",
+    "project_id": "covidwatch-146ba",
+    "storage_bucket": "covidwatch-146ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001228092283:android:7cd64cecadb6ab902bb3de",
+        "android_client_info": {
+          "package_name": "com.example.covidwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001228092283-vpkpn8k453ni9tcmfoh6j8cvbi94rs1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCykpD3h5QCa1oqmI5XGmOLgNr0dhtQLCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001228092283-vpkpn8k453ni9tcmfoh6j8cvbi94rs1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

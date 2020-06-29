@@ -33,6 +33,10 @@ dependencies:
   geolocator:
   google_maps_webservice:
   flutter_google_places:
+  firebase_auth:
+  cloud_firestore:
+  flutter_facebook_login: ^3.0.0
+
 
 dev_dependencies:
   flutter_test:

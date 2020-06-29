@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:covidwatch/Login.dart';
 import 'package:covidwatch/MenuItem.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -9,6 +10,9 @@ import 'bloc/bloc_navigation/navigation_bloc.dart';
 
 
 class SideBar extends StatefulWidget {
+  final UserInfoDetails user;
+
+  const SideBar({Key key, this.user}) : super(key: key);
   @override
   _SideBarState createState() => _SideBarState();
 
@@ -67,16 +71,18 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             SizedBox(height: 70,),
-                            CircleAvatar(
-                              child: Icon(
-                                Icons.perm_identity,
-                                color: Colors.white,
-                              ),
-                              radius: 50,
-                              backgroundColor: Colors.grey,
-                            ),
+                            new Container(
+                                width: MediaQuery.of(context).size.width*0.3,
+                                height: MediaQuery.of(context).size.width*0.3,
+                                decoration: new BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: new DecorationImage(
+                                        fit: BoxFit.fill,
+                                        image: new NetworkImage(widget.user.photoUrl)
+                                    )
+                                )),
                             SizedBox(height: 20,),
-                            Text("Abdenour Benantar",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
+                            Text(widget.user.displayName,style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
                             SizedBox(height: 30,),
                           ],
                         ),
