@@ -13,6 +13,7 @@ class SidebarLayout extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
         body: BlocProvider<NavigationBloc>(
           create: (context)=>NavigationBloc(),
           child: Stack(

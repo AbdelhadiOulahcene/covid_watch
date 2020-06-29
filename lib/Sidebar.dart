@@ -23,11 +23,13 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
   StreamController<bool> isSidebarOpenedStreamController;
   Stream<bool> isSidebarOpenedStream;
   StreamSink<bool> isSidebarOpenedSink;
+  String username;
   final _animationDuration=const Duration(milliseconds: 500 );
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    username=widget.user.displayName;
     _animationController=AnimationController(vsync: this,duration: _animationDuration);
     isSidebarOpenedStreamController=PublishSubject<bool>();
     isSidebarOpenedStream=isSidebarOpenedStreamController.stream;
@@ -43,6 +45,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
   }
   @override
   Widget build(BuildContext context) {
+    final myController=TextEditingController();
     final screenWidth=MediaQuery.of(context).size.width;
     return StreamBuilder<bool>(
       initialData: false,
@@ -81,9 +84,42 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                         image: new NetworkImage(widget.user.photoUrl)
                                     )
                                 )),
+                            SizedBox(height: 15,),
+                            Text(username,style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
+                            SizedBox(height: 5,),
+                            InkWell(
+                              child: Text("Click here to change your username",style: TextStyle(fontSize: 10,color: Colors.deepOrange),),
+                              onTap: (){
+                                return showDialog(
+                                  context: context,
+                                  child: Center(
+                                    child: AlertDialog(
+                                      title: Text("Change username"),
+                                      content: SingleChildScrollView(
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text("Veuillez mettre votre nom et prenom"),
+                                            TextField(controller: myController,)
+                                          ],
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        FlatButton(
+                                          child: Text("Save"),
+                                          onPressed: (){
+                                            setState(() {
+                                              username=myController.text;
+                                            });
+                                            Navigator.of(context).pop();
+                                          },
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
                             SizedBox(height: 20,),
-                            Text(widget.user.displayName,style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w800),),
-                            SizedBox(height: 30,),
                           ],
                         ),
                       ),
