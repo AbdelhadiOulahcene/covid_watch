@@ -1,3 +1,4 @@
+import 'package:covidwatch/StatsPage.dart';
 import 'package:covidwatch/layout.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,7 +20,6 @@ class Login extends StatelessWidget {
     Size media = MediaQuery.of(context).size;
     double h=media.height;
     double w=media.width;
-    print(h);print(w);
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body:Stack(
@@ -169,7 +169,8 @@ class Login extends StatelessWidget {
 
                   ),
                 onTap: (){
-                  _signIn(context).then((FirebaseUser user)=>print(user.email)).catchError((e)=>print(e));
+                  //_signIn(context).then((FirebaseUser user)=>print(user.email)).catchError((e)=>print(e));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Stats()));
                 },
               ),
 

@@ -1,8 +1,15 @@
 import 'package:covidwatch/Login.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'package:provider/provider.dart';
+
 //import './Login.dart';
 
 class Splashscreen extends StatefulWidget {
+  static Map global;
+  static var algeria;
   Splashscreen({
     Key key,}) : super(key: key);
 
@@ -11,9 +18,31 @@ class Splashscreen extends StatefulWidget {
 }
 
 class _SplashscreenState extends State<Splashscreen> {
+
+
+   getGlobalStats() async {
+    http.Response response = await http.get('https://corona.lmao.ninja/v2/all');
+    if(response.statusCode==200){
+      Splashscreen.global=json.decode(response.body);
+    }
+    else {
+      print(response.statusCode);
+    }
+  }
+   getAlgeriaStats() async {
+    http.Response response = await http.get('https://corona.lmao.ninja/v2/countries');
+    if(response.statusCode==200){
+      Splashscreen.algeria=json.decode(response.body);
+    }
+    else {
+      print(response.statusCode);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
+
     Future.delayed(
       Duration(seconds: 4),(){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
@@ -24,7 +53,8 @@ class _SplashscreenState extends State<Splashscreen> {
     Size media = MediaQuery.of(context).size;
     double h=media.height;
     double w=media.width;
-    print(h);print(w);
+    getGlobalStats();
+    getAlgeriaStats();
     return Scaffold(
       body:Stack(
       children: <Widget>[
