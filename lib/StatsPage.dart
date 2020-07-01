@@ -94,7 +94,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/virus.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Confirmed\ninfections",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -109,7 +109,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/heart.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["recovered"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["recovered"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Recovered\ncases",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -124,7 +124,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/person.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["deaths"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["deaths"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Confirmed \n deaths",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -145,7 +145,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/virus.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["active"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["active"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Active\ncases",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -160,7 +160,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/bed.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["critical"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["critical"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("In\nhospital",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -175,14 +175,14 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/location.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.algeria[2]["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.algeria[2]["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Near to\nyou ",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height*0.06,),
+              SizedBox(height: MediaQuery.of(context).size.height*0.08,),
               Row(
                 children: <Widget>[
                   Text("Global:",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
@@ -194,7 +194,7 @@ class _StatsState extends State<Stats> {
                   )
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+              SizedBox(height: MediaQuery.of(context).size.height*0.06,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -208,7 +208,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/virus.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Confirmed\ninfections",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -223,7 +223,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/heart.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["recovered"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["recovered"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Recovered\ncases",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -238,7 +238,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/person.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["deaths"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["deaths"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Confirmed \n deaths",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -259,7 +259,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/virus.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["active"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["active"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Active\ncases",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -274,7 +274,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/bed.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["critical"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["critical"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("In\nhospital",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),
@@ -289,7 +289,7 @@ class _StatsState extends State<Stats> {
                     child: Column(
                       children: <Widget>[
                         Image.asset("assets/images/location.png",width:MediaQuery.of(context).size.width*0.1 ,color: Colors.white,),
-                        Text(Splashscreen.global["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                        Text(Splashscreen.global["cases"].toString(),style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
                         Text("Near to\nyou ",style: TextStyle(color: Colors.white,fontSize: 12,),textAlign: TextAlign.center,),
                       ],
                     ),

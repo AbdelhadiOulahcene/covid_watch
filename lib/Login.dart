@@ -169,8 +169,7 @@ class Login extends StatelessWidget {
 
                   ),
                 onTap: (){
-                  //_signIn(context).then((FirebaseUser user)=>print(user.email)).catchError((e)=>print(e));
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Stats()));
+                  _signIn(context).then((FirebaseUser user)=>print(user.email)).catchError((e)=>print(e));
                 },
               ),
 
